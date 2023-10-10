@@ -13,7 +13,7 @@ W-e: Thunar
 
 #### Desktops
 ```
-C-A-Left/ C-A-Right: Switch to left/right desktop
+C-A-Left / C-A-Right: Switch to left/right desktop
 C-A-S-Left/C-A-S-Right: Move window to left/right desktop + follow
 ```
 
