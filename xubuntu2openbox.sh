@@ -6,7 +6,7 @@ HOME=/home/$USER
 apt update
 apt upgrade -y
 
-apt remove xubuntu-core xubuntu-desktop -y
+apt remove xubuntu-core xubuntu-desktop plymouth-theme-xubuntu-logo plymouth-theme-xubuntu-text -y
 apt autoremove -y
 
 snap remove firefox
