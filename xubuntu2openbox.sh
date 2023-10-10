@@ -116,20 +116,9 @@ echo '<?xml version="1.0" encoding="UTF-8"?>
 
 <placement>
   <policy>Smart</policy>
-  <!-- 'Smart' or 'UnderMouse' -->
   <center>yes</center>
-  <!-- whether to place windows in the center of the free area found or
-       the top left corner -->
   <monitor>Primary</monitor>
-  <!-- with Smart placement on a multi-monitor system, try to place new windows
-       on: 'Any' - any monitor, 'Mouse' - where the mouse is, 'Active' - where
-       the active window is, 'Primary' - only on the primary monitor -->
   <primaryMonitor>1</primaryMonitor>
-  <!-- The monitor where Openbox should place popup dialogs such as the
-       focus cycling popup, or the desktop switch popup.  It can be an index
-       from 1, specifying a particular monitor.  Or it can be one of the
-       following: 'Mouse' - where the mouse is, or
-                  'Active' - where the active window is -->
 </placement>
 
 <theme>
@@ -152,54 +141,42 @@ echo '<?xml version="1.0" encoding="UTF-8"?>
     <size>8</size>
     <!-- font size in points -->
     <weight>bold</weight>
-    <!-- 'bold' or 'normal' -->
     <slant>normal</slant>
-    <!-- 'italic' or 'normal' -->
   </font>
   <font place="InactiveWindow">
     <name>sans</name>
     <size>8</size>
     <!-- font size in points -->
     <weight>bold</weight>
-    <!-- 'bold' or 'normal' -->
     <slant>normal</slant>
-    <!-- 'italic' or 'normal' -->
   </font>
   <font place="MenuHeader">
     <name>sans</name>
     <size>9</size>
     <!-- font size in points -->
     <weight>normal</weight>
-    <!-- 'bold' or 'normal' -->
     <slant>normal</slant>
-    <!-- 'italic' or 'normal' -->
   </font>
   <font place="MenuItem">
     <name>sans</name>
     <size>9</size>
     <!-- font size in points -->
     <weight>normal</weight>
-    <!-- 'bold' or 'normal' -->
     <slant>normal</slant>
-    <!-- 'italic' or 'normal' -->
   </font>
   <font place="ActiveOnScreenDisplay">
     <name>sans</name>
     <size>9</size>
     <!-- font size in points -->
     <weight>bold</weight>
-    <!-- 'bold' or 'normal' -->
     <slant>normal</slant>
-    <!-- 'italic' or 'normal' -->
   </font>
   <font place="InactiveOnScreenDisplay">
     <name>sans</name>
     <size>9</size>
     <!-- font size in points -->
     <weight>bold</weight>
-    <!-- 'bold' or 'normal' -->
     <slant>normal</slant>
-    <!-- 'italic' or 'normal' -->
   </font>
 </theme>
 
@@ -228,25 +205,13 @@ echo '<?xml version="1.0" encoding="UTF-8"?>
 <resize>
   <drawContents>yes</drawContents>
   <popupShow>Nonpixel</popupShow>
-  <!-- 'Always', 'Never', or 'Nonpixel' (xterms and such) -->
   <popupPosition>Center</popupPosition>
-  <!-- 'Center', 'Top', or 'Fixed' -->
   <popupFixedPosition>
-    <!-- these are used if popupPosition is set to 'Fixed' -->
-
     <x>10</x>
-    <!-- positive number for distance from left edge, negative number for
-         distance from right edge, or 'Center' -->
     <y>10</y>
-    <!-- positive number for distance from top edge, negative number for
-         distance from bottom edge, or 'Center' -->
   </popupFixedPosition>
 </resize>
 
-<!-- You can reserve a portion of your screen where windows will not cover when
-     they are maximized, or when they are initially placed.
-     Many programs reserve space automatically, but you can use this in other
-     cases. -->
 <margins>
   <top>0</top>
   <bottom>0</bottom>
@@ -261,16 +226,13 @@ echo '<?xml version="1.0" encoding="UTF-8"?>
   <floatingY>0</floatingY>
   <noStrut>no</noStrut>
   <stacking>Above</stacking>
-  <!-- 'Above', 'Normal', or 'Below' -->
   <direction>Vertical</direction>
-  <!-- 'Vertical' or 'Horizontal' -->
   <autoHide>no</autoHide>
   <hideDelay>300</hideDelay>
   <!-- in milliseconds (1000 = 1 second) -->
   <showDelay>300</showDelay>
   <!-- in milliseconds (1000 = 1 second) -->
   <moveButton>Middle</moveButton>
-  <!-- 'Left', 'Middle', 'Right' -->
 </dock>
 
 <keyboard>
@@ -726,8 +688,6 @@ echo '<?xml version="1.0" encoding="UTF-8"?>
 </mouse>
 
 <menu>
-  <!-- You can specify more than one menu file in here and they are all loaded,
-       just don't make menu ids clash or, well, it'll be kind of pointless -->
 
   <!-- default menu file (or custom one in $HOME/.config/openbox/) -->
   <!-- system menu files on Debian systems -->
@@ -760,15 +720,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>
   # own rules, but without the comments of course.
   # you may use one or more of the name/class/role/title/type rules to specify
   # windows to match
-
-  <application name="the window's _OB_APP_NAME property (see obxprop)"
-              class="the window's _OB_APP_CLASS property (see obxprop)"
-          groupname="the window's _OB_APP_GROUP_NAME property (see obxprop)"
-         groupclass="the window's _OB_APP_GROUP_CLASS property (see obxprop)"
-               role="the window's _OB_APP_ROLE property (see obxprop)"
-              title="the window's _OB_APP_TITLE property (see obxprop)"
-               type="the window's _OB_APP_TYPE property (see obxprob)..
-                      (if unspecified, then it is 'dialog' for child windows)">
+  
   # you may set only one of name/class/role/title/type, or you may use more
   # than one together to restrict your matches.
 
@@ -782,10 +734,6 @@ echo '<?xml version="1.0" encoding="UTF-8"?>
   # when multiple rules match a window, they will all be applied, in the
   # order that they appear in this list
 
-
-    # each rule element can be left out or set to 'default' to specify to not 
-    # change that attribute of the window
-
     <decor>yes</decor>
     # enable or disable window decorations
 
@@ -793,42 +741,22 @@ echo '<?xml version="1.0" encoding="UTF-8"?>
     # make the window shaded when it appears, or not
 
     <position force="no">
-      # the position is only used if both an x and y coordinate are provided
-      # (and not set to 'default')
-      # when force is "yes", then the window will be placed here even if it
-      # says you want it placed elsewhere.  this is to override buggy
-      # applications who refuse to behave
       <x>center</x>
-      # a number like 50, or 'center' to center on screen. use a negative number
-      # to start from the right (or bottom for <y>), ie -50 is 50 pixels from
-      # the right edge (or bottom). use 'default' to specify using value
-      # provided by the application, or chosen by openbox, instead.
       <y>200</y>
       <monitor>1</monitor>
-      # specifies the monitor in a xinerama setup.
-      # 1 is the first head, or 'mouse' for wherever the mouse is
     </position>
 
     <size>
       # the size to make the window.
       <width>20</width>
-      # a number like 20, or 'default' to use the size given by the application.
-      # you can use fractions such as 1/2 or percentages such as 75% in which
-      # case the value is relative to the size of the monitor that the window
-      # appears on.
       <height>30%</height>
     </size>
 
     <focus>yes</focus>
-    # if the window should try be given focus when it appears. if this is set
-    # to yes it doesn't guarantee the window will be given focus. some
-    # restrictions may apply, but Openbox will try to
 
     <desktop>1</desktop>
-    # 1 is the first desktop, 'all' for all desktops
 
     <layer>normal</layer>
-    # 'above', 'normal', or 'below'
 
     <iconic>no</iconic>
     # make the window iconified when it appears, or not
@@ -844,7 +772,6 @@ echo '<?xml version="1.0" encoding="UTF-8"?>
     # make the window in fullscreen mode when it appears
 
     <maximized>true</maximized>
-    # 'Horizontal', 'Vertical' or boolean (yes/no)
   </application>
 
   # end of the example
