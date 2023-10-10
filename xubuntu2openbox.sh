@@ -3,6 +3,9 @@
 USER=rose
 HOME=/home/$USER
 
+mkdir -p $HOME/Pictures
+mv wall.jpg $HOME/Pictures/
+
 apt update
 apt upgrade -y
 
@@ -871,4 +874,24 @@ gtk-xft-hinting=1
 gtk-xft-hintstyle=hintfull
 gtk-xfg-rgba=rgb' > $HOME/.config/gtk-3.0/settings.ini
 
+mkdir p $HOME/.config/nitrogen
+echo "[xin_-1]
+file=$HOME/Pictures/wall.jpg
+mode=5
+bgcolor=#000000" > $HOME/.config/nitrogen/bg-saved.cfg
+
+echo "[geometry]
+posx=0
+posy=0
+sizex=510
+sizey=500
+
+[nitrogen]
+view=icon
+recurse=true
+sort=alpha
+icon_caps=false
+dirs=$HOME/Pictures;" > $HOME/.config/nitrogen/nitrogen.cfg
+
+chown $USER:$USER /home/Pictures/wall.jpg
 chown -R $USER:$USER /home/$USER/.config
