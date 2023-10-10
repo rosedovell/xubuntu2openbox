@@ -28,7 +28,10 @@ apt install -y compton \
                firefox \
 	       flatpak \
                focuswriter \
+	       fonts-ubuntu \
 	       libreoffice \
+               lxappearance \
+               lxappearance-obconf \
                nitrogen\
 	       openbox \
 	       terminator \
@@ -849,5 +852,23 @@ tooltip_hide_timeout = 0.1
 tooltip_padding = 4 4
 tooltip_background_id = 5
 tooltip_font_color = #dddddd 100' > $HOME/.config/tint2/tint2rc
+
+mkdir -p $HOME/.config/gtk-3.0
+echo '[Settings]
+gtk-theme-name=Greybird-dark
+gtk-icon-theme-name=elementary-xfce-dark
+gtk-font-name=Ubuntu Medium 10
+gtk-cursor-theme-name=Adwaita
+gtk-cursor-theme-size=0
+gtk-toolbar-style=GTK_TOOLBAR_ICONS
+gtk-toolbar-icon-size=GTK_ICON_SIZE_LARGE_TOOLBAR
+gtk-button-images=1
+gtk-menu-images=1
+gtk-enable-event-sounds=1
+gtk-enable-input-feedback-sounds=1
+gtk-xft-antialias=1
+gtk-xft-hinting=1
+gtk-xft-hintstyle=hintfull
+gtk-xfg-rgba=rgb' > $HOME/.config/gtk-3.0/settings.ini
 
 chown -R $USER:$USER /home/$USER/.config
