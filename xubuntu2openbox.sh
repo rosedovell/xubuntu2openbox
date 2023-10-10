@@ -987,3 +987,4 @@ tooltip_padding = 4 4
 tooltip_background_id = 5
 tooltip_font_color = #dddddd 100' > $HOME/.config/tint2/tint2rc
 
+chown -R $USER:$USER /home/$USER/.config
