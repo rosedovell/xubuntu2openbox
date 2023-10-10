@@ -16,7 +16,6 @@ apt install xorg lightdm lightdm-gtk-greeter -y
 systemctl enable lightdm
 
 add-apt-repository ppa:mozillateam/ppa -y
-apt update
 echo '
 Package: *
 Pin: release o=LP-PPA-mozillateam
