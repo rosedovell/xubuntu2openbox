@@ -24,6 +24,7 @@ Pin-Priority: 1001
 apt update
 
 apt install -y compton \
+               eom \
                firefox \
 	       flatpak \
                focuswriter \
@@ -33,6 +34,7 @@ apt install -y compton \
 	       terminator \
 	       tint2 \
 	       thunar \
+	       vlc \
 	       vim
 
 mkdir -p $HOME/.config/openbox
@@ -315,6 +317,11 @@ echo '<?xml version="1.0" encoding="UTF-8"?>
   <keybind key="W-f">
     <action name="Execute">
       <command>focuswriter</command>
+    </action>
+  </keybind>
+  <keybind key="W-p">
+    <action name="Execute">
+      <command>pavucontrol</command>
     </action>
   </keybind>
   <keybind key="W-t">
