@@ -36,6 +36,7 @@ apt install -y compton \
 	       thunar \
 	       vim
 
+mkdir -p $HOME/.config/openbox
 echo 'compton &
 nitrogen --restore &
 tint2 &' > $HOME/.config/openbox/autostart
