@@ -280,11 +280,11 @@ echo '<?xml version="1.0" encoding="UTF-8"?>
   </keybind>
   <keybind key="W-Left">        # HalfLeftScreen
     <action name="UnmaximizeFull"/>
-    <action name="MoveResizeTo"><x>0</x><y>0</y><height>97%</height><width>50%</width></action>
+    <action name="MoveResizeTo"><x>0</x><y>0</y><height>100%</height><width>50%</width></action>
   </keybind>
   <keybind key="W-Right">       # HalfRightScreen
     <action name="UnmaximizeFull"/>
-    <action name="MoveResizeTo"><x>-0</x><y>0</y><height>97%</height><width>50%</width></action>
+    <action name="MoveResizeTo"><x>-0</x><y>0</y><height>100%</height><width>50%</width></action>
   </keybind>
   <keybind key="W-S-Left">
     <action name="DirectionalCycleWindows">
