@@ -4,7 +4,7 @@ USER=rose
 HOME=/home/$USER
 
 mkdir -p $HOME/Pictures
-mv wall.jpg $HOME/Pictures/
+cp wall.jpg $HOME/Pictures/
 
 apt update
 apt upgrade -y
@@ -211,10 +211,10 @@ echo '<?xml version="1.0" encoding="UTF-8"?>
   <keybind key="C-A-Down">
     <action name="GoToDesktop"><to>down</to><wrap>no</wrap></action>
   </keybind>
-  <keybind key="S-A-Left">
+  <keybind key="C-S-A-Left">
     <action name="SendToDesktop"><to>left</to><wrap>no</wrap></action>
   </keybind>
-  <keybind key="S-A-Right">
+  <keybind key="C-S-A-Right">
     <action name="SendToDesktop"><to>right</to><wrap>no</wrap></action>
   </keybind>
   <keybind key="S-A-Up">
@@ -874,9 +874,9 @@ gtk-xft-hinting=1
 gtk-xft-hintstyle=hintfull
 gtk-xfg-rgba=rgb' > $HOME/.config/gtk-3.0/settings.ini
 
-mkdir p $HOME/.config/nitrogen
+mkdir -p $HOME/.config/nitrogen
 echo "[xin_-1]
-file=$HOME/Pictures/wall.jpg
+file=/home/$USER/Pictures/wall.jpg
 mode=5
 bgcolor=#000000" > $HOME/.config/nitrogen/bg-saved.cfg
 
@@ -891,7 +891,7 @@ view=icon
 recurse=true
 sort=alpha
 icon_caps=false
-dirs=$HOME/Pictures;" > $HOME/.config/nitrogen/nitrogen.cfg
+dirs=/home/$USER/Pictures;" > $HOME/.config/nitrogen/nitrogen.cfg
 
 chown $USER:$USER /home/Pictures/wall.jpg
 chown -R $USER:$USER /home/$USER/.config
