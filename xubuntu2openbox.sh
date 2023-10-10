@@ -893,5 +893,5 @@ sort=alpha
 icon_caps=false
 dirs=/home/$USER/Pictures;" > $HOME/.config/nitrogen/nitrogen.cfg
 
-chown $USER:$USER /home/Pictures/wall.jpg
-chown -R $USER:$USER /home/$USER/.config
+chown $USER:$USER $HOME/Pictures/wall.jpg
+chown -R $USER:$USER $HOME/.config
