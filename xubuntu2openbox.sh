@@ -109,7 +109,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>
 </placement>
 
 <theme>
-  <name>Clearlooks</name>
+  <name>Nightmare</name>
   <titleLayout>NLIMC</titleLayout>
   <keepBorder>yes</keepBorder>
   <animateIconify>yes</animateIconify>
