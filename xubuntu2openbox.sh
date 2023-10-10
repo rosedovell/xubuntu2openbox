@@ -1036,7 +1036,6 @@ clock_dwheel_command =
 # Battery
 battery_tooltip = 1
 battery_low_status = 10
-battery_low_cmd = xmessage 'tint2: Battery low!'
 battery_full_cmd = 
 battery_font_color = #ffffff 100
 bat1_format = 
